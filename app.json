@@ -25,5 +25,5 @@
 			"description": "URL of upstream Legacy server to which all requests should be proxied"
 		}
 	},
-	"stack": "Heroku-18"
+	"stack": "heroku-18"
 }
