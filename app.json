@@ -1,0 +1,29 @@
+{
+	"name": "Heroku Reverse Proxy",
+	"description": "Spin up a reverse proxy quickly on Heroku for App, API and Auth Services",
+	"keywords": [
+		"reverse proxy",
+		"nginx"
+	],
+	"repository": "https://github.com/eccegordo/app-api-auth-heroku-reverse-proxy",
+	"buildpacks": [
+		{
+			"url": "http://github.com/leafo/heroku-buildpack-lua.git"
+		}
+	],
+	"env": {
+		"UPSTREAM_APP_SERVER": {
+			"description": "URL of upstream APP server to which all requests should be proxied"
+		},
+		"UPSTREAM_AUTH_SERVER": {
+			"description": "URL of upstream AUTH server to which all requests should be proxied"
+		},
+		"UPSTREAM_API_SERVER": {
+			"description": "URL of upstream API server to which all requests should be proxied"
+		},
+		"UPSTREAM_LEGACY_SERVER": {
+			"description": "URL of upstream Legacy server to which all requests should be proxied"
+		}
+	},
+	"stack": "cedar-18"
+}
